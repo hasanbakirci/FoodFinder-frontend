@@ -19,5 +19,14 @@ export default class FoodService{
         let result = axios.get("https://localhost:5001/api/Foods/Search/"+id)
         return result
     }
+    postImage(formData){
+        const config = {
+            headers: {
+            "content-type": "multipart/form-data"
+            }
+        };
+        let result = axios.post("https://localhost:5001/api/Foods/SearchImage/",formData,config)
+        return result
+    }
 
 }

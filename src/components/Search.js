@@ -7,12 +7,12 @@ export default function Search(props) {
     }
 
 
-    function _handleEnterKey(e){
-        if(e.key === 'Enter'){
-            console.log(e.target.value)
-            props.search(e.target.value)
-        }
-    }
+    // function _handleEnterKey(e){
+    //     if(e.key === 'Enter'){
+    //         console.log(e.target.value)
+    //         props.search(e.target.value)
+    //     }
+    // }
 
     
     return (
@@ -26,13 +26,17 @@ export default function Search(props) {
                 <input type="radio" className="btn-check" name="btnradio" id="btnradio2" autocomplete="off"
                 onClick={() => _handleChangeSelected('ingredients')}/>
                 <label className="btn btn-outline-primary" for="btnradio2">Malzemelere göre</label>
+
+                <input type="radio" className="btn-check" name="btnradio" id="btnradio3" autocomplete="off"
+                onClick={() => _handleChangeSelected('image')}/>
+                <label className="btn btn-outline-primary" for="btnradio3">Resme göre</label>
             </div>
 
 
-            <div className="container col-md-4 mx-auto mt-4">
+            {/* <div className="container col-md-4 mx-auto mt-4">
                 <input type="text" className="form-control " id="mesaj" placeholder="Veri bekleniyor.."
                                  onKeyPress={(e) => _handleEnterKey(e)} />
-            </div>
+            </div> */}
         </div>
     )
 }
